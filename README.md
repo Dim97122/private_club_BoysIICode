@@ -4,9 +4,9 @@ Bastien Willet
 
 ## Comment lancer le programme ?
 
-Lien -> [Secret](URL)
-Tu peux créer un nouvel utilisateur ou bien te connecter avec cet identifiant bidon :
-email: roberto@chocho.com
+Lien -> [Secret](URL) <br />
+Tu peux créer un nouvel utilisateur ou bien te connecter avec cet identifiant bidon : <br />
+email: roberto@chocho.com <br />
 password: QP7b5RtX
 
 ## Synopsis
