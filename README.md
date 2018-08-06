@@ -1,6 +1,6 @@
 ## Créateur
 
-Bastien Willet
+Dimitri KIAVUE
 
 ## Comment lancer le programme ?
 
