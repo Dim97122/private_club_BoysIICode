@@ -1,21 +1,39 @@
-</br>
-<h3>Logge toi mon petit</h3>
-</br>
-<div class="formy">
-	<%= form_for(:session, url: login_path) do |f| %>
-		<div class="form-group">
-			<%= f.label 'Saisis ton e-mail' %>
-			<%= f.text_field :email, class:"form-control", placeholder:"E-mail" %>
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Log In</title>
+	</head>
+	<body>
+		<center>
+      <br><br><br><br><br><br><br><br><br>
+				<h3>Please give us the compulsory information to access the Lounge</h3>
+				</br>
+				<div class="formy">
+					<%= form_for(:session, url: login_path) do |f| %>
+						<div class="form-group">
+							<%= f.label 'Enter your First Name' %>
+							<%= f.text_field :first_name, class:"form-control", placeholder:"First Name" %>
+						</div>
+						<div class="form-group">
+							<%= f.label 'Enter your Last Name' %>
+							<%= f.text_field :last_name, class:"form-control", placeholder:"Last Name" %>
+						</div>
+						<div class="form-group">
+							<%= f.label 'Enter your E-mail' %>
+							<%= f.text_field :email, class:"form-control", placeholder:"E-mail" %>
+						</div>
+						<div class="form-group">
+							<%= f.label 'Enter your Password' %>
+							<%= f.password_field :password, class:"form-control", placeholder:"Password" %>
+						</div>
+						<div class="form-group">
+							<%= f.label :remember_me, class: "checkbox inline" do %>
+				        		<%= f.check_box :remember_me %><span>Remember me</span>
+				      		<% end %>
+						</div>
+						<p><%= f.submit "Login", class:"btn btn-primary" %> <a href="/users/new">New Member ?</a></p>
+					<% end %>
 		</div>
-		<div class="form-group">
-			<%= f.label 'Saisis ton mot de passe' %>
-			<%= f.password_field :password, class:"form-control", placeholder:"Mot de passe" %>
-		</div>
-		<div class="form-group">
-			<%= f.label :remember_me, class: "checkbox inline" do %>
-        		<%= f.check_box :remember_me %><span>Se souvenir de moi</span>
-      		<% end %>
-		</div>
-		<p><%= f.submit "Se logger", class:"btn btn-primary" %> <a href="/users/new">Nouvel utilisateur ?</a></p>
-	<% end %>
-</div>
+	</body>
+</html>

@@ -9,6 +9,8 @@ end
 class User < ApplicationRecord
   attr_accessor :remember_token
 
+  validates :first_name, presence: true
+  validates :last_name, presence: true
   validates :email, presence: true, uniqueness: true, email: true
   validates :password, presence: true
   has_secure_password
@@ -18,7 +20,7 @@ class User < ApplicationRecord
                                                     BCrypt::Engine.cost
     BCrypt::Password.create(string, cost: cost)
   end
-  
+
   def User.new_token
     SecureRandom.urlsafe_base64
   end

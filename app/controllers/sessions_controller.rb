@@ -7,16 +7,16 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:session][:password])
       log_in user
       params[:session][:remember_me] == '1' ? remember(user) : forget(user)
-      flash[:success] = 'Utilisateur loggé'
+      flash[:success] = 'You are now logged in'
       redirect_to '/'
     else
-      flash[:success] = 'Ya un problème mon coco'
+      flash[:notice] = 'Obviously something went wrong...'
     end
   end
 
   def destroy
     log_out
-    flash[:success] = 'Utilisateur déloggé'
+    flash[:success] = 'You\'ve been logged out'
     redirect_to '/'
   end
 end

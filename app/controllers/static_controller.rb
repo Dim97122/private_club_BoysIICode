@@ -2,9 +2,9 @@ class StaticController < ApplicationController
     def home
     end
 
-    def secret
+    def home_club
         if logged_in? == false
-            flash[:danger] = 'hey login-toi pour y accéder'
+            flash.now[:danger] = 'You\'re not allowed to go there'
             redirect_to '/'
         end
     end

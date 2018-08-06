@@ -1,6 +1,21 @@
-</br>
-<% if logged_in? %>
-    <p><a href="/secret">Réponse de l'univers</a></p>
-<% else %>
-    <p>Logge toi pour accéder à toutes les connaissances de l'univers</p>
-<% end %>
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Home</title>
+  </head>
+  <body>
+    <center>
+      <br><br><br><br><br><br><br><br><br>
+      <h1>Welcome to The Suits Club!</h1>
+      </br>
+      <% if logged_in? %>
+          <p><a class="btn btn-primary" href="/home_club">Lounge Access</a></p>
+      <% else %>
+          <p>To access the Lounge please subscribe to the Service</p>
+          <br>
+          <p><a class="btn btn-primary" href="/login">Subscribe</a></p>
+      <% end %>
+    </center>
+  </body>
+</html>
